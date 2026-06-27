@@ -1,0 +1,6 @@
+@UserapiEfCore_HostAddress = http://localhost:5192
+
+GET {{UserapiEfCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
