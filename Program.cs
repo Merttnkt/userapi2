@@ -3,10 +3,12 @@ using UserapiEfCore.Data;
 using UserapiEfCore.Models;
 
 var builder = WebApplication.CreateBuilder(args);   
-var app = builder.Build();
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=users.db"));
+
+var app = builder.Build();
 
 app.MapGet("/users", (AppDbContext context) =>
 {
